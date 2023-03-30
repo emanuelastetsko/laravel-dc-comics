@@ -4,6 +4,9 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+// Models
+use App\Models\Comic;
+
 return new class extends Migration
 {
     /**
@@ -21,6 +24,7 @@ return new class extends Migration
             $table->unsignedFloat('price', 6, 2);
             $table->string('series', 50);
             $table->date('sale_date');
+            $table->string('type', 128);
             $table->timestamps();
         });
     }

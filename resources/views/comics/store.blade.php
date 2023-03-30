@@ -8,12 +8,11 @@
             <div class="row">
                 <div class="col">
                     <div class="cards my-5">
-                        <h1 class="text-center">Laravel DC COMICS</h1>
+                        <h1 class="text-center">COMICS.STORE</h1>
                     </div>
-                    <button class="my-btn btn btn-primary">Load comics</button>
                 </div>
             </div>
         </div>
     </div>
-    
+
 @endsection

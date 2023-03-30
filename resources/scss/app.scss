@@ -1,1 +1,14 @@
 @import "~bootstrap/scss/bootstrap";
+
+.my-btn {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 40px;
+}
+
+.my-img {
+    width: 100%;
+    object-fit: cover;
+}
+

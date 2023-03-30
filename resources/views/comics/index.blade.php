@@ -27,3 +27,47 @@
     </div>
 
 @endsection
+
+
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h1>Comics</h1>
+                    <br>
+                    <a href="{{ route('comics.create') }}" class="btn btn-success">Add comic</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <ul>
+                        @foreach($comics as $comic)
+                            <li>
+                                {{ $comic->title }}
+                                <br>
+                                <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary">Show</a>
+                                <br>
+                                <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-warning">Edit</a>
+                                <br>
+                                <form onsubmit="return confirm('Sei sicuro di voler eliminare questo Pkmn?');" action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

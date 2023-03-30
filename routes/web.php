@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Admiin\ComicController;
+use App\Http\Controllers\Admin\AdminComicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('comic', ComicController::class);
+Route::resource('comics', AdminComicController::class);
